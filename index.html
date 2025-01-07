@@ -32,30 +32,6 @@
     </header>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const nomeElement = document.querySelector('#nome');
-            const userElement = document.querySelector ('#user');
-            const avatarElement = document.querySelector ('#avatar');
-            const repositoriosElement = document.querySelector ('#repositorios');
-            const seguidoresElement = document.querySelector ('#seguidores');
-            const seguindoElement = document.querySelector ('#seguindo');
-            const linkElement = document.querySelector ('#link');
-
-            fetch('https://api.github.com/users/saradess')
-            .then(function(res){
-                return res.json();
-            })
-            .then(function(json) {
-                nomeElement.innerText = json.name;
-                userElement.innerText = json.login;
-                avatarElement.src = json.avatar_url;
-                repositoriosElement.innerText = json.public_repos;
-                seguidoresElement.innerText = json.following;
-                seguindoElement.innerText = json.followers;
-                linkElement.href = json.html_url
-            })
-        })
-    </script>
+    <script src="./main.js"></script>
 </body>
 </html>
